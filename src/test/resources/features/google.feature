@@ -1,7 +1,7 @@
 Ability: Login
 
   Background:
-    Given I navigate to "https://the-internet.herokuapp.com/"
+    Given I navigate to "/"
 
   Scenario: Add Elements
     And I click on "Add/Remove Elements"

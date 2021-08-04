@@ -39,6 +39,7 @@ public class CucumberConfig {
         return browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(1920, 1080)
                 .setRecordVideoDir(Path.of("video"))
+                .setBaseURL("https://the-internet.herokuapp.com")
                 .setHttpCredentials("admin", "admin"));
     }
 
