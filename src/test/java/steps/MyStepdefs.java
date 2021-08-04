@@ -3,6 +3,7 @@ package steps;
 import com.microsoft.playwright.Page;
 import di.CucumberConfig;
 import di.ScenarioContext;
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -34,6 +35,15 @@ public class MyStepdefs {
     public void iClickOnSeveralTimes(String elementText, int times) {
         for (int i = 0; i < times; i++) {
             iEnterToAdasdField(elementText);
+        }
+    }
+
+    @ParameterType("username|password")
+    public String field(String selector) {
+        if (selector.equals("username")) {
+            return "id=username";
+        } else {
+            return "id=password";
         }
     }
 
