@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 
-import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import static io.cucumber.spring.CucumberTestContext.SCOPE_CUCUMBER_GLUE;
 
@@ -38,7 +38,7 @@ public class CucumberConfig {
     public BrowserContext getBrowserContext() {
         return browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(1920, 1080)
-                .setRecordVideoDir(Path.of("video"))
+                .setRecordVideoDir(Paths.get("video"))
                 .setBaseURL("https://the-internet.herokuapp.com")
                 .setHttpCredentials("admin", "admin"));
     }

@@ -27,13 +27,13 @@ public class MyStepdefs {
 
     @And("I click on {string}")
     public void iEnterToAdasdField(String elementText) {
-        page.click("text=%s".formatted(elementText));
+        page.click(String.format("text=%s", elementText));
     }
 
     @And("I click on {string} {int} times")
     public void iClickOnSeveralTimes(String elementText, int times) {
         for (int i = 0; i < times; i++) {
-            page.click("text=%s".formatted(elementText));
+            iEnterToAdasdField(elementText);
         }
     }
 
