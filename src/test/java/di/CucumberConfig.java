@@ -31,6 +31,7 @@ public class CucumberConfig {
     @Bean(destroyMethod = "close")
     public Browser getBrowser() {
         return playwright.chromium().launch(new BrowserType.LaunchOptions()
+                .setChannel("chrome")
                 .setHeadless(false));
     }
 
