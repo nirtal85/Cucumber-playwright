@@ -3,6 +3,7 @@ package di;
 import com.microsoft.playwright.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import java.nio.file.Paths;
@@ -15,6 +16,7 @@ import static io.cucumber.spring.CucumberTestContext.SCOPE_CUCUMBER_GLUE;
  * Time: 10:59
  * Created with IntelliJ IDEA
  */
+@Configuration
 public class CucumberConfig {
     @Autowired
     private Playwright playwright;

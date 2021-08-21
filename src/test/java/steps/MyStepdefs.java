@@ -1,8 +1,7 @@
 package steps;
 
 import com.microsoft.playwright.Page;
-import di.CucumberConfig;
-import di.ScenarioContext;
+import di.SpringDemoApplication;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -19,7 +18,7 @@ import org.testng.Assert;
  * Time: 10:52
  * Created with IntelliJ IDEA
  */
-@SpringBootTest(classes = {CucumberConfig.class, Hooks.class, ScenarioContext.class})
+@SpringBootTest(classes = {SpringDemoApplication.class})
 @EnableAspectJAutoProxy
 @CucumberContextConfiguration
 public class MyStepdefs {
