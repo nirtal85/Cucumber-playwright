@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "classpath:features",
-        plugin = "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm",
+        plugin = "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
         tags = "not @Ignore",
         glue = "steps"
 )

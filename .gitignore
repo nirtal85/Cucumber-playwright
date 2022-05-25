@@ -56,10 +56,10 @@ target/
 /build
 
 # Test
-test-output/*
-allure-results/*
-allure-report/*
-video/*
+test-output/
+allure-results/
+allure-report/
+video/
 *attachment.txt
 *attachment.json
 
